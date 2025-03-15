@@ -14,8 +14,35 @@ import { TimelineItem } from "@/components/TimelineItem";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import SpringBootIcon from "@/assets/icons8-spring-boot.svg";
+import githubIcon from "@/assets/github.svg";
+import Lenis from "@studio-freight/lenis";
+
+
 
 const Index = () => {
+
+
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.5,
+  //     easing: (t) => 1 - Math.pow(1 - t, 4),
+  //     smoothWheel: true,
+  //     syncTouch: true,
+  //     touchMultiplier: 2,
+  //   });
+
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+
+  //   requestAnimationFrame(raf);
+
+  //   return () => lenis.destroy();
+  // }, []);
+
+  
+  
   const scrollRef = useRef<HTMLDivElement>(null);
   const {
     scrollYProgress
@@ -23,9 +50,9 @@ const Index = () => {
     target: scrollRef,
     offset: ["start start", "end start"]
   });
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, 80]);
   
   const projectsData = [{
     title: "E-Commerce Platform",
@@ -72,28 +99,7 @@ const Index = () => {
       name: "Java",
       icon: <Code className="w-5 h-5" />,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-    }, 
-    {
-      name: "JavaScript",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-    }, 
-    {
-      name: "TypeScript",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-    }, 
-    {
-      name: "React",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-    }, 
-    {
-      name: "Node.js",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-    }, 
-    
+    },
     {
       name: "Spring",
       icon: <Code className="w-5 h-5" />,
@@ -105,45 +111,50 @@ const Index = () => {
       logo: SpringBootIcon
     }, 
     {
-      name: "MongoDB",
+      name: "Dart",
       icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
     }, 
     {
-      name: "PostgreSQL",
+      name: "Flutter",
       icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-    }, 
-    {
-      name: "AWS",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
-    }, 
-    {
-      name: "Docker",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-    }, 
-    {
-      name: "Git",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-    }, 
-    {
-      name: "CI/CD",
-      icon: <Code className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
     }, 
     {
       name: "HTML/CSS",
       icon: <Code className="w-5 h-5" />,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+    },
+    {
+      name: "JavaScript",
+      icon: <Code className="w-5 h-5" />,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
     }, 
     {
-      name: "Responsive Design",
-      icon: <Layers className="w-5 h-5" />,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-    }
+      name: "React",
+      icon: <Code className="w-5 h-5" />,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    }, 
+    {
+      name: "MongoDB",
+      icon: <Code className="w-5 h-5" />,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+    }, 
+    {
+      name: "MySQL",
+      icon: <Code className="w-5 h-5" />,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+    },
+    // {
+    //   name: "AWS",
+    //   icon: <Code className="w-5 h-5" />,
+    //   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+    // }, 
+    // {
+    //   name: "Git",
+    //   icon: <Code className="w-5 h-5" />,
+    //   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    // }
   ];
 
   return <div ref={scrollRef} className="relative overflow-hidden bg-dot-pattern">
@@ -160,6 +171,8 @@ const Index = () => {
         </motion.div>
 
         <div className="text-center max-w-4xl mx-auto">
+
+          {/* Software Engineer Text */}
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -169,12 +182,12 @@ const Index = () => {
         }} transition={{
           duration: 0.5,
           delay: 0.2
-        }} className="inline-block mb-4 px-4 py-1.5 rounded-full bg-accent text-primary font-medium text-sm">
+        }} className="inline-block mb-4 px-4 py-1.5 rounded-full bg-accent text-primary font-medium text-md">
             Software Engineer
           </motion.div>
           
           <div className="mb-6">
-            <AnimatedText text="Building exceptional digital experiences with code" className="text-4xl md:text-6xl font-display font-bold text-balance leading-tight" tag="h1" delay={0.5} />
+            <AnimatedText text="Transforming  Creative  ideas  into  powerful  code" className="text-4xl md:text-6xl font-display font-bold text-balance leading-tight" tag="h1" delay={0.5} />
           </div>
           
           <motion.p initial={{
@@ -187,11 +200,11 @@ const Index = () => {
           duration: 0.5,
           delay: 1.2
         }} className="text-lg md:text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
-            I'm a passionate software engineer specializing in creating elegant, high-performance web applications with modern technologies.
+            I'm Koustav Manna, a passionate software engineer specializing in creating elegant high-performance backend web applications with modern technologies.
           </motion.p>
           
           <motion.div initial={{
-          opacity: 0,
+          opacity: 1,
           y: 20
         }} animate={{
           opacity: 1,
@@ -200,12 +213,22 @@ const Index = () => {
           duration: 0.5,
           delay: 1.5
         }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="primary" size="lg" icon={<Mail className="w-5 h-5" />} onClick={() => document.getElementById("contact")?.scrollIntoView({
+            <Button variant="primary" size="lg" 
+            icon={<Mail className="w-5 h-5" />} 
+            onClick={() => document.getElementById("contact")?.scrollIntoView({
             behavior: "smooth"
-          })}>
+          })}
+          className="w-56"
+          >
               Get in Touch
             </Button>
-            <Button variant="outline" size="lg" icon={<Github className="w-5 h-5" />} onClick={() => window.open("https://github.com/yourusername", "_blank")}>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              icon={<Github className="w-5 h-5" />} 
+              onClick={() => window.open("https://github.com/Koustav009", "_blank")}
+              className="border-2 border-primary w-55"
+            >
               View My Work
             </Button>
           </motion.div>
@@ -239,7 +262,7 @@ const Index = () => {
             duration: 0.6,
             ease: [0.16, 1, 0.3, 1]
           }}>
-              <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+              <div className="inline-block mb-5 px-4 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
                 About Me
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -298,7 +321,7 @@ const Index = () => {
       <Element name="skills">
         <Section id="skills">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
               Skills & Expertise
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -327,7 +350,7 @@ const Index = () => {
       <Element name="projects">
         <Section id="projects" className="bg-accent/30">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
               Featured Projects
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -355,7 +378,7 @@ const Index = () => {
         <Section id="experience">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+              <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
                 Work Experience
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -389,7 +412,7 @@ const Index = () => {
             duration: 0.6,
             ease: [0.16, 1, 0.3, 1]
           }}>
-              <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+              <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
                 Get in Touch
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">

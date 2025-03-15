@@ -71,7 +71,9 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <ScrollLink to="hero" smooth={true} duration={500} className="text-2xl font-display font-bold tracking-tight relative cursor-pointer glow">
-            <span className="text-gradient text-4xl">Koustav Manna</span>
+            <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="text-gradient text-5xl">Koustav Manna</button>
           </ScrollLink>
 
           {/* Desktop Menu */}

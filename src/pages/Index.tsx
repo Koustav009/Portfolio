@@ -55,43 +55,44 @@ const Index = () => {
   const y = useTransform(scrollYProgress, [0, 0.5], [0, 80]);
   
   const projectsData = [{
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with product management, cart functionality, and secure checkout.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/username/project"
-  }, {
-    title: "AI Content Generator",
-    description: "An AI-powered tool that helps users generate various types of content like blog posts, product descriptions, etc.",
-    image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?q=80&w=1000",
-    tags: ["Python", "TensorFlow", "React", "Flask"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/username/project"
-  }, {
     title: "Real-time Chat Application",
     description: "A responsive chat application with real-time messaging, user authentication, and file sharing capabilities.",
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c2a4c?q=80&w=1000",
-    tags: ["React", "Socket.io", "Firebase", "Tailwind"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/username/project"
-  }];
+    image: "/src/assets/ChatApp-page.png",
+    tags: ["React", "Websocket", "Spring Boot", "Mongo DB"],
+    liveUrl: "https://chat.koustavmanna.tech",
+    repoUrl: "https://github.com/Koustav009/ChatApp"
+  },{
+    title: "Quizoo - Quiz Bot",
+    description: "A Quiz platform featuring over 20 diverse topics, offering an interactive experience, also includes seamless integration with WhatsApp.",
+    image: "/src/assets/Quizo-page.png",
+    tags: ["IBM Cloud", "Python", "AWS Lambda"],
+    liveUrl: "https://web-chat.global.assistant.watson.appdomain.cloud/preview.html?backgroundImageURL=https%3A%2F%2Fau-syd.assistant.watson.cloud.ibm.com%2Fpublic%2Fimages%2Fupx-1fe8a762-3583-435b-a2c2-9aef26aff5e6%3A%3Ae8088409-7203-41c3-b790-e983d492f13a&integrationID=6ff3e2ef-58a5-426f-b378-05d60f1f2c89&region=au-syd&serviceInstanceID=1fe8a762-3583-435b-a2c2-9aef26aff5e6",
+    repoUrl: null
+  }, {
+    title: "Tic Tac Toe",
+    description: "A classic Tic Tac Toe game with a simple and intuitive interface. Play against a friend, Perfect for quick fun and sharpening your tactical skills!",
+    image: "/src/assets/ticTacToe.png",
+    tags: ["HTML", "CSS", "JS"],
+    liveUrl: "https://game.koustavmanna.tech/",
+    repoUrl: "https://github.com/Koustav009/Tic_tac_toe"
+  }
+];
 
   const experienceData = [{
-    date: "Jan 2022 - Present",
-    title: "Senior Software Engineer",
-    company: "TechCorp Inc.",
-    description: "Leading development of cloud-based applications, mentoring junior developers, and implementing microservices architecture using React, Node.js, and AWS."
+    date: "Jan 2025 - Present",
+    title: "Junior Software Engineer",
+    company: "DR DM Tech Private Limited.",
+    description: "Contributing to the development of the HealthEChat app and website as a Junior Software Engineer, focusing primarily on backend development. Working with Spring Boot, Flutter, Dart, and MongoDB to build scalable and efficient solutions."
   }, {
-    date: "Mar 2020 - Dec 2021",
-    title: "Full Stack Developer",
-    company: "Digital Innovations",
-    description: "Developed and maintained multiple client projects using React, TypeScript, and Express, implemented CI/CD pipelines, and optimized application performance."
+    date: "July 2021 - Aug 2024",
+    title: "Bachelor of Computer Applications (Grad.)",
+    company: "Maulana Abul Kalam Azad University of Technology, West Bengal",
+    description: "Completed a Bachelor of Computer Applications (BCA) with a strong foundation in software development, data structures, and database management. Gained hands-on experience in programming languages, web development, and cloud technologies while working on various projects."
   }, {
-    date: "Jun 2018 - Feb 2020",
-    title: "Frontend Developer",
-    company: "CreativeWeb Solutions",
-    description: "Built responsive user interfaces using modern JavaScript frameworks, collaborated with designers, and integrated RESTful APIs."
+    date: "June 2019 - April 2021",
+    title: "Higher Secondery (12th)",
+    company: "Khorop High School , Howrah , West Bengal",
+    description: "Focused on academics while actively pursuing favourite sports badminton, achieving a balance between sports and studies, and passing with decent marks."
   }];
 
   const skills = [
@@ -271,13 +272,13 @@ const Index = () => {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  Hello! I'm a passionate software engineer with over 5 years of experience in developing elegant, high-performance web applications. I specialize in both frontend and backend technologies, with a focus on creating responsive and intuitive user interfaces.
+                Hello! I'm Koustav Manna, a Software Engineer specializing in backend technologies, with a strong focus on building secure APIs and scalable microservices. While my expertise lies in the backend, I also have a working knowledge of frontend and Android development, allowing me to create well-integrated and efficient systems.
                 </p>
                 <p>
-                  My journey in coding began during my computer science studies, where I fell in love with the process of bringing ideas to life through code. Since then, I've worked with startups and established companies alike, helping them build products that users love.
+                  My journey in coding began during my BCA studies, where I fell in love with the process of bringing ideas to life through code. Since then,  I have been continuously learning and honing my skills, exploring various technologies to build innovative and efficient solutions.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical blog posts.
+                  When I'm not coding, you'll find me Playing badminton, reading books, contributing to open-source or creating my own projects.
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-4">
@@ -300,7 +301,7 @@ const Index = () => {
             ease: [0.16, 1, 0.3, 1]
           }} className="perspective relative">
               <div className="relative rounded-2xl overflow-hidden glass border border-white/10 h-full aspect-square md:aspect-auto preserve-3d rotate-y hover:rotate-y-10">
-                <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2000" alt="Profile" className="w-full h-full object-cover object-center" />
+                <img src="/src/assets/IMG_20250315_230342.png" alt="Profile" className="w-full h-full object-cover object-center" />
               </div>
               <div className="absolute -bottom-6 -right-6 p-4 glass rounded-xl border border-white/10 preserve-3d rotate-y-10">
                 <p className="font-mono text-sm">
@@ -324,7 +325,7 @@ const Index = () => {
             <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
               Skills & Expertise
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
               My Professional <span className="text-gradient">Skillset</span>
             </h2>
             <p className="text-foreground/70">
@@ -353,7 +354,7 @@ const Index = () => {
             <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
               Featured Projects
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
               Recent <span className="text-gradient">Work</span>
             </h2>
             <p className="text-foreground/70">
@@ -366,7 +367,7 @@ const Index = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <Button variant="outline" icon={<ExternalLink className="w-4 h-4" />} onClick={() => window.open("https://github.com/yourusername", "_blank")}>
+            <Button variant="outline" icon={<ExternalLink className="w-4 h-4" />} onClick={() => window.open("https://github.com/Koustav009", "_blank")}>
               View All Projects
             </Button>
           </div>
@@ -381,8 +382,8 @@ const Index = () => {
               <div className="inline-block mb-4 px-3 py-1 rounded-full bg-accent text-accent-foreground text-md font-medium">
                 Work Experience
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                My Professional <span className="text-gradient">Journey</span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+                My Life   <span className="text-gradient"> Journey</span>
               </h2>
               <p className="text-foreground/70 max-w-2xl mx-auto">
                 Throughout my career, I've had the opportunity to work with amazing teams and contribute to impactful projects.
@@ -432,7 +433,7 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <Mail className="w-5 h-5 mr-3 text-primary" />
-                    <span>your.email@example.com</span>
+                    <a href="mailto:manna98.koustav@gmail.com" className="text-primary hover:underline">manna98.koustav@gmail.com</a>
                   </li>
                 </ul>
               </div>

@@ -91,7 +91,7 @@ export function Navbar() {
               {isDarkMode ? <Sun className="h-5 w-5 text-yellow-300" /> : <Moon className="h-5 w-5" />}
             </button>
             
-            <Button variant="primary" size="sm" className="ml-4" onClick={() => window.open("/resume.pdf", "_blank")}>
+            <Button variant="primary" size="sm" className="ml-4" onClick={() => window.open("https://drive.google.com/file/d/13oyedwIEqMVE5lgL4s5EERRef0d12S9q/view?usp=sharing", "_blank")}>
               Resume
             </Button>
           </div>
@@ -120,8 +120,9 @@ export function Navbar() {
           {navLinks.map(link => <ScrollLink key={link.target} to={link.target} spy={true} smooth={true} offset={-100} duration={500} className="text-xl font-medium py-2 cursor-pointer hover:text-primary transition-colors duration-300" activeClass="text-primary font-medium" onClick={() => setMobileMenuOpen(false)}>
               {link.name}
             </ScrollLink>)}
+
           <Button variant="primary" size="md" className="mt-8" onClick={() => {
-          window.open("/resume.pdf", "_blank");
+          window.open("https://drive.google.com/file/d/13oyedwIEqMVE5lgL4s5EERRef0d12S9q/view?usp=sharing", "_blank");
           setMobileMenuOpen(false);
         }}>
             Resume

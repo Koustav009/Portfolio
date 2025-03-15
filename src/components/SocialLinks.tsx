@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function SocialLinks() {
@@ -7,22 +7,22 @@ export function SocialLinks() {
     {
       name: "GitHub",
       icon: <Github className="w-5 h-5" />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/Koustav009",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/koustav-manna/",
     },
     {
       name: "Twitter",
-      icon: <Twitter className="w-5 h-5" />,
-      url: "https://twitter.com/yourusername",
+      icon: <X className="w-5 h-5" />,
+      url: "https://x.com/koustav00X",
     },
     {
       name: "Email",
       icon: <Mail className="w-5 h-5" />,
-      url: "mailto:your.email@example.com",
+      url: "mailto:manna98.koustav@gmail.com",
     },
   ];
 

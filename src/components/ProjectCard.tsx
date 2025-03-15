@@ -62,17 +62,17 @@ export function ProjectCard({
             <h3 className="text-xl font-bold mb-2">{title}</h3>
             <p className="text-foreground/70 mb-4">{description}</p>
             <div className="flex items-center gap-3">
-              {repoUrl && (
+              {
                 <a
-                  href={repoUrl}
-                  target="_blank"
+                  href={repoUrl || "javascript:void(0);"}
+                  target={repoUrl ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full hover:bg-accent transition-colors duration-300"
+                  className={`p-2 rounded-full transition-colors duration-300 ${repoUrl ? "hover:bg-accent" : "cursor-not-allowed opacity-50"}`}
                   aria-label="View repository"
                 >
                   <Github className="w-5 h-5" />
                 </a>
-              )}
+              }
               {liveUrl && (
                 <a
                   href={liveUrl}

@@ -171,7 +171,7 @@ const Index = () => {
           <GradientBlob className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2" colors={["rgba(125, 145, 255, 0.6)", "rgba(170, 111, 251, 0.6)"]} size="80%" />
         </motion.div>
 
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto py-[60px]">
 
           {/* Software Engineer Text */}
           <motion.div initial={{
@@ -282,7 +282,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-4">
-                <Button variant="primary" icon={<ArrowRight className="w-5 h-5" />} iconPosition="right" onClick={() => window.open("/resume.pdf", "_blank")}>
+                <Button variant="primary" icon={<ArrowRight className="w-5 h-5" />} iconPosition="right" onClick={() => window.open("https://drive.google.com/file/d/13oyedwIEqMVE5lgL4s5EERRef0d12S9q/view?usp=sharing", "_blank")}>
                   View Resume
                 </Button>
               </div>

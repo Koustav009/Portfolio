@@ -7,9 +7,14 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 
+import { useSmoothScroll } from "./hooks/use-smooth-scroll";
+
 function App() {
   // Check if device is touch device to disable cursor effect
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  // Initialize smooth scrolling
+  useSmoothScroll();
 
   useEffect(() => {
     // Check if it's a touch device

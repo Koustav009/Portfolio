@@ -37,6 +37,18 @@ export function Navbar() {
     
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
   
   const toggleDarkMode = () => {
     if (document.documentElement.classList.contains('dark')) {
@@ -116,6 +128,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       <div className={cn("md:hidden fixed inset-0 pt-20 bg-background/95 backdrop-blur-lg transition-transform duration-300 ease-in-expo z-40", mobileMenuOpen ? "translate-x-0" : "translate-x-full")}>
+      {/* Close button positioned at the top right */}
+      <button 
+           className="absolute top-12 right-4 p-2 rounded-full bg-accent/50 hover:bg-accent transition-colors duration-300"
+           onClick={() => setMobileMenuOpen(false)}
+           aria-label="Close menu"
+         >
+           <X className="h-6 w-6" />
+         </button>
         <div className="flex flex-col items-center space-y-6 p-8">
           {navLinks.map(link => <ScrollLink key={link.target} to={link.target} spy={true} smooth={true} offset={-100} duration={500} className="text-xl font-medium py-2 cursor-pointer hover:text-primary transition-colors duration-300" activeClass="text-primary font-medium" onClick={() => setMobileMenuOpen(false)}>
               {link.name}

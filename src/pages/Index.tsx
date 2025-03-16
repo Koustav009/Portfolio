@@ -57,21 +57,21 @@ const Index = () => {
   const projectsData = [{
     title: "Real-time Chat Application",
     description: "A responsive chat application with real-time messaging, user authentication, and file sharing capabilities.",
-    image: "/src/assets/ChatApp-page.png",
+    image: "/ChatApp-page.png",
     tags: ["React", "Websocket", "Spring Boot", "Mongo DB"],
     liveUrl: "https://chat.koustavmanna.tech",
     repoUrl: "https://github.com/Koustav009/ChatApp"
   },{
     title: "Quizoo - Quiz Bot",
     description: "A Quiz platform featuring over 20 diverse topics, offering an interactive experience, also includes seamless integration with WhatsApp.",
-    image: "/src/assets/Quizo-page.png",
+    image: "/Quizo-page.png",
     tags: ["IBM Cloud", "Python", "AWS Lambda"],
     liveUrl: "https://web-chat.global.assistant.watson.appdomain.cloud/preview.html?backgroundImageURL=https%3A%2F%2Fau-syd.assistant.watson.cloud.ibm.com%2Fpublic%2Fimages%2Fupx-1fe8a762-3583-435b-a2c2-9aef26aff5e6%3A%3Ae8088409-7203-41c3-b790-e983d492f13a&integrationID=6ff3e2ef-58a5-426f-b378-05d60f1f2c89&region=au-syd&serviceInstanceID=1fe8a762-3583-435b-a2c2-9aef26aff5e6",
     repoUrl: null
   }, {
     title: "Tic Tac Toe",
     description: "A classic Tic Tac Toe game with a simple and intuitive interface. Play against a friend, Perfect for quick fun and sharpening your tactical skills!",
-    image: "/src/assets/ticTacToe.png",
+    image: "/ticTacToe.png",
     tags: ["HTML", "CSS", "JS"],
     liveUrl: "https://game.koustavmanna.tech/",
     repoUrl: "https://github.com/Koustav009/Tic_tac_toe"
@@ -301,7 +301,7 @@ const Index = () => {
             ease: [0.16, 1, 0.3, 1]
           }} className="perspective relative">
               <div className="relative rounded-2xl overflow-hidden glass border border-white/10 h-full aspect-square md:aspect-auto preserve-3d rotate-y hover:rotate-y-10">
-                <img src="/src/assets/IMG_20250315_230342.png" alt="Profile" className="w-full h-full object-cover object-center" />
+                <img src="/IMG_20250315_230342.png" alt="Profile" className="w-full h-full object-cover object-center" />
               </div>
               <div className="absolute -bottom-6 -right-6 p-4 glass rounded-xl border border-white/10 preserve-3d rotate-y-10">
                 <p className="font-mono text-sm">

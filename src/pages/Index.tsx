@@ -201,7 +201,7 @@ const Index = () => {
           duration: 0.5,
           delay: 1.2
         }} className="text-lg md:text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
-            I'm Koustav Manna, a passionate software engineer specializing in creating elegant high-performance backend web applications with modern technologies.
+            I'm <span className="text-gradient font-bold">Koustav Manna</span>, a passionate software engineer specializing in creating elegant high-performance backend web applications with modern technologies.
           </motion.p>
           
           <motion.div initial={{
